@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    :root {
+      --gold: gold;
+      --light: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .logo span {
+      color: var(--light);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 1rem;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      position: relative;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      bottom: -5px;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      background-color: #333;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    body, html {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: url('transparent_logo.png') center center/contain no-repeat;
+      background-color: #000;
+      background-size: 400px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px; /* Space for navbar */
+      padding: 20px;
+    }
+    .contact{
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1564866657313-07c921f20726?auto=format&fit=crop&w=1650&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .contact-text h1 {
+      font-size: 3rem;
+      color: var(--light);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .condact-text span {
+      color: var(--gold);
+    }
+    .phone-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00c853;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .phone-link:hover {
+      background-color: #009624;
+    }
+    a {
+      color: #FFD700;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SK Event<span>Pro</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html"class="active">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+    
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <br>
+      <br>
+      <p>
+        <a href="https://wa.me/916369311843" target="_blank" style="color: #FFD700;">Click here to contect on WhatsApp</a>
+        <br>
+        <a href="https://www.instagram.com/sk.event_planner" style="color: #FFD700;">Click here to view our insta page</a>
+        <br><br>
+        <h2>Call Support</h2><br>
+        <a class="phone-link" href="tel:+916369311843">📞 +916369311843</a>
+      </p>
+    </section>
+    <a href="home.html">← Back to Home</a>
+
+
+  </body>
+</html>
